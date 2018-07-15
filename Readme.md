@@ -8,7 +8,9 @@ dockerfile 手动部署
  `docker build -t ulord:master .`
 
 * 运行
- `docker run -d -p 19887:19887 -p 19889:19889 --name ulord -v ulordcore:/root/.ulordcore ulord:master`
+```shell
+docker run -d -p 19887:19887 -p 19889:19889 --name ulord -v `pwd`/ulordcore:/root/.ulordcore ulord:master
+```
 
 * 停止
  `docker stop ulord`
